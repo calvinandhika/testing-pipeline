@@ -1,0 +1,14 @@
+# .github/workflows/self-hosted-test.yml
+name: Self-Hosted Runner Test
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    name: Run on Self-Hosted Mac
+    runs-on: [self-hosted, macOS]
+    steps:
+      - name: Say Hello from Mac!
+        run: echo "👋 Hello from self-hosted macOS runner!"
